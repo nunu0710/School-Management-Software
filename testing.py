@@ -3,7 +3,6 @@ database = {
         {"first_name": "John", "last_name": "Smith", "class": "3C"},
         {"first_name": "Anna", "last_name": "Purple", "class": "3C"},
         {"first_name": "Jan", "last_name": "Kowalski", "class": "4E"},
-        {"first_name": "lam", "last_name": "kan", "class": "4E"},
     ],
     "teachers": [
         {"first_name": "John", "last_name": "Smith", "subject": "math", "classes": ["3C", "4E"]},

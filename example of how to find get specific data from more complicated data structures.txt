@@ -1,0 +1,24 @@
+database = {
+    "students": [
+        {"first_name": "John", "last_name": "Smith", "class": "3C"},
+        {"first_name": "Anna", "last_name": "Purple", "class": "3C"},
+        {"first_name": "Jan", "last_name": "Kowalski", "class": "4E"},
+    ],
+    "teachers": [
+        {"first_name": "John", "last_name": "Smith", "subject": "math", "classes": ["3C", "4E"]},
+    ],
+    "homeroom_teachers": [
+        {"first_name": "Jan", "last_name": "Kowalski", "class": "3C"},
+    ]
+}
+
+first_name = input("Provide first name: ")
+last_name = input("Provide last name: ")
+
+for homeroom_teacher in database["homeroom_teachers"]:
+    if homeroom_teacher["first_name"] == first_name and homeroom_teacher["last_name"] == last_name:
+        print(f"Homeroom teacher {first_name} {last_name} leads class {homeroom_teacher['class']}")
+        print("Student's list:")
+        for student in database["students"]:
+            if student["class"] == homeroom_teacher["class"]:
+                print(f"{student['first_name']} {student['last_name']}")
